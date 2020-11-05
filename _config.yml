@@ -84,6 +84,11 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
+  
+collections:
+  products:
+    output: true
+
 algolia:
   application_id: EFD6VBZXBP
   index_name: products
