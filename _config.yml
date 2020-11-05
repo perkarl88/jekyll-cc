@@ -83,3 +83,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+algolia:
+  application_id: EFD6VBZXBP
+  index_name: products
+  search_only_api_key: a790fd140e7cd902b4ec457ccf175c15
+  
