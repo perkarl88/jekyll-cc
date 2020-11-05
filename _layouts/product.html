@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="feed-grid">
+	<div class="l-bar"></div>
+	<div class="content">
+		
+{% assign products = site.products | sort: 'listing-priority' %}
+<div class="main-container">
+<div class="section">
+	<a class="back-btn" href="/">
+		<svg class="back-btn-icon" xmlns="http://www.w3.org/2000/svg" width="122" height="79" viewBox="0 0 122 79" fill="none">
+		<path d="M63.1213 0.950648C61.9497 -0.220925 60.0503 -0.220922 58.8787 0.950651L1.55078 58.2786C-0.0113148 59.8407 -0.011311 62.3733 1.55079 63.9354L14.6031 76.9877C16.1652 78.5498 18.6978 78.5498 20.2599 76.9877L58.8787 38.3689C60.0503 37.1973 61.9497 37.1973 63.1213 38.3689L101.74 76.9877C103.302 78.5498 105.835 78.5498 107.397 76.9877L120.449 63.9354C122.011 62.3733 122.011 59.8406 120.449 58.2786L63.1213 0.950648Z" fill="black"/>
+		</svg>		
+		Back
+	</a>
+	<img class="card-avatar" src="{{ page.logo }}">
+		<div syle="display: flex;">
+		<div class="card-name">{{ page.product-name }}</div>
+		<div class="card-handle">{{ page.description-short }}</div>
+	</div>
+</div>
+</div>
+		
+	</div>
+	<div class="r-bar"></div>
+</div>
+
