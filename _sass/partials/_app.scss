@@ -8,6 +8,9 @@ a {
     filter: drop-shadow(rgba(80, 73, 74, 0.29) 20px -30px 30px);    
     height: 56px;
     background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99;    
 }
 
 .content {
@@ -24,6 +27,14 @@ a {
     margin: 0 auto;
     min-height: 100vh;
     grid-template-columns: 268px 1fr 268px;    
+}
+
+.ais-search-box--powered-by {
+    display: none !important;
+}
+
+#search-searchbar {
+    height: 42px;
 }
 
 .ais-hits, .product-grid {
@@ -265,4 +276,106 @@ a {
     top: 0;
     left: 0;
     height: auto;
+}
+
+/* PRODUCT PAGE -------------------------------------------------- PRODUCT PAGE */
+
+.back-btn {
+    border-radius: 100px;
+    padding: 9px 16px;
+    background: rgb(228,228,228);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+    transition: background 120ms;
+    color: #333;
+}
+
+.back-btn:hover {
+    background: rgb(220,220,220);
+}
+
+
+.back-btn-icon {
+    transform: rotate(-90deg);
+    width: auto;
+    height: 6px;
+    margin-right: 12px;
+}
+
+/* RESPONSIVE -------------------------------------------------- RESPONSIVE */
+
+@media screen and (max-width: 600px) {
+.ais-hits {
+    grid-template-columns: 1fr;
+    background: rgb(242,243,244);
+}
+
+.product-grid {
+    grid-template-columns: 1fr;
+}
+
+.content-grid {
+    grid-template-columns: 1fr;
+}
+
+.l-bar {
+    order: 1;
+    padding: 40px 16px 20px;
+}
+
+.content {
+    order: 1;
+    padding: 0;
+}
+
+.feed {
+    grid-template-columns: 1fr;
+}
+
+.product-card__img {
+    padding: 0 16px;
+}
+
+.product-card__img img {
+  border-radius: 20px;
+}
+
+.wrapper {
+    border-radius: 20px;
+}
+
+.section {
+  padding: 0px;
+}
+
+[style*="--aspect-ratio"]>:first-child {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.fa-star {
+    top: 0px !important;
+}
+
+.product-card {
+  border-radius: 0;
+}
+
+body {
+filter: unset;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: tiempos;
+}
+
+.site-header {
+  position: absolute;  
+}
+
 }
