@@ -11,20 +11,23 @@ layout: default
 
   <div class="content">
 
-<div class="product-grid">
+
 
 {% assign products = site.products | sort: 'date' %}
 {% for product in products %}
+
 <div class="post-list" id="search-hits">
 </div>
 {% endfor %}
+
 {% include algolia.html %}
 
 
-    {% assign products = site.products | sort: 'date' %}
-    {% for product in products %}  
-  <a href="{{ product.url }}" class="product-card">
-    
+<div class="product-grid">
+{% assign products = site.products | sort: 'date' %}
+{% for product in products %}
+
+  <a href="{{ product.url }}" class="product-card hide">    
     <div class="product-card__header">    
       <img class="post-header-avatar" src="{{ product.logo }}">
       <div class="">
@@ -35,7 +38,6 @@ layout: default
       </div>
       </div>
     </div>
-
     <div class="product-card__body">      
       <div class="product-card__img">
         <div class="wrapper">
@@ -47,7 +49,8 @@ layout: default
       <p>ECI empowers to build and sustain the programs that are proven to increase integrity in organizations.</p>
     </div>
   </a>
-    {% endfor %}     
+{% endfor %}
+
 </div>
  
   </div>

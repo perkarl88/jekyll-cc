@@ -17,7 +17,7 @@ search.addWidget(
     templates: {
       item: function(hit) {
         return `
-          <a href="{{ site.baseurl }}${hit.url}" class="product-card">
+          <a href="${hit.url}" class="product-card">
             <div class="product-card__header">
               <img class="post-header-avatar" src="${hit.logo}">
               <div>

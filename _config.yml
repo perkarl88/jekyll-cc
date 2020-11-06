@@ -84,7 +84,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-  
+
 collections:
   products:
     output: true
@@ -93,4 +93,9 @@ algolia:
   application_id: EFD6VBZXBP
   index_name: products
   search_only_api_key: a790fd140e7cd902b4ec457ccf175c15
+  files_to_exclude: 
+    - blog.html
+    - page.html
+    - pages/*
+    - _posts/*
   
