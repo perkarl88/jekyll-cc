@@ -87,22 +87,32 @@ span.ais-search-box--magnifier-wrapper {
        -moz-animation: fadein 0.8s;
         -ms-animation: fadein 0.8s;
          -o-animation: fadein 0.8s;
-            animation: fadein 0.8s;  
+            animation: fadein 0.4s;  
 }
 
 .ais-hits--item .product-card__body p {
     animation-fill-mode: forwards;
-
     -webkit-animation: fadein 0.8s;
        -moz-animation: fadein 0.8s;
         -ms-animation: fadein 0.8s;
          -o-animation: fadein 0.8s;
-            animation: fadein 0.8s;    
+            animation: fadein 0.4s;    
 }
 
 @keyframes fadein {
     from { opacity: 0; filter: blur(6px);}
     to   { opacity: 1; filter: blur(0px);}
+}
+
+
+.product-grid .product-card__header, .placeholder-text {
+    animation-fill-mode: forwards;
+    animation: fadeout 0.4s;    
+}
+
+@keyframes fadeout {
+    from { filter: blur(0px);}
+    to   { filter: blur(6px);}
 }
 
 .post-header-avatar-placeholder {
