@@ -1,16 +1,18 @@
 const search = instantsearch({
   appId: 'EFD6VBZXBP',
   indexName: 'products',
-  apiKey: 'a790fd140e7cd902b4ec457ccf175c15'
+  apiKey: 'a790fd140e7cd902b4ec457ccf175c15',
+  routing: true
 });
 
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search-searchbar',
     placeholder: 'Search into posts...',
-    poweredBy: true 
+    poweredBy: true,
   })
 );
+
 search.addWidget(
   instantsearch.widgets.hits({
     container: '#search-hits',
@@ -48,4 +50,22 @@ search.addWidget(
   })
 );
 
+
+search.addWidget(
+    instantsearch.widgets.menu({
+        container: '#menu',
+        attributeName: 'tags',
+        sortBy: ['isRefined', 'count:desc', 'name:asc'],
+        limit: 10,
+        templates: {
+            header: '<h3 class="widgettitle">Type</h3>'
+        },
+    })
+);
+
+
+
+
+
 search.start();
+
