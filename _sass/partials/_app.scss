@@ -112,6 +112,7 @@ span.ais-search-box--magnifier-wrapper {
     text-align: center;
 }
 
+
 .ais-menu--item .ais-menu--link {
     color: #999;
     background: rgb(240,240,240);
@@ -409,6 +410,37 @@ span.ais-search-box--magnifier-wrapper {
 /* !!RESPONSIVE !!MOBILE -------------------------------------------------- RESPONSIVE */
 
 @media screen and (max-width: 600px) {
+
+.ais-body.ais-menu--body {
+    height: 60px;
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
+.ais-menu--list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-left: 12px;
+    padding-bottom: 60px;
+}
+
+.ais-menu--item {
+    width: fit-content;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.ais-menu--item .ais-menu--link {
+    margin-right: 8px;
+}
+
 .ais-hits {
     grid-template-columns: 1fr;
     background: rgb(242,243,244);
